@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paystic</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="/favicon (1).ico" type="image/x-icon">
+</head>
+<body>
+    <div class="index">
+        <div class="result-box">
+            <h3>RSLTS-results spelt without vowels (●'◡'●)</h3>
+            <p>Click the scan button to capture videoframe and the generate button to display the identified items on the video frame and the suggested thrash bin</p>
+            <a href="/scan" id="sendDataButton"><button>SCAN</button></a>
+            <a href="/generate"><button>GENERATE</button></a>
+            <p><strong>The labels are:</strong></p>
+            <% generateLabels.forEach(label => { %>
+                <p><em><%= label %></em></p>
+            <% }); %>
+            <p><strong>The suggested bin is: </strong><em><%=bin%></em></p>
+            
+        </div>
+        <div class="">
+            <video id="videoElement" class="cam-feed" autoplay playsinline></video>
+        </div>
+      </div>    
+    
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
